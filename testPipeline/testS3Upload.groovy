@@ -9,7 +9,7 @@ parameters {
         def aws_credential = 'aws-test'
     
         steps{
-                withAWS(region:"${region}", credentials:"${aws_credential}){
+                withAWS(region:"${region}", credentials:"${aws_credential}"){
 
                     s3Download(file:"${TAG_NAME}", bucket:"${bucket}", path:"")
                 }
